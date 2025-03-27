@@ -1,6 +1,6 @@
 import React from "react";
 
-const LoginForm = ({ formData, setFormData }) => {
+const RegisterForm = ({ formData, setFormData }) => {
   const handleInputChange = (e) => {
     setFormData((prev) => ({
       ...prev,
@@ -12,16 +12,24 @@ const LoginForm = ({ formData, setFormData }) => {
     <div className="flex flex-col items-center justify-center w-full py-3 space-y-6">
       <input
         type="text"
-        name="username"
-        value={formData.username || ""}
+        name="name"
+        value={formData.name || ""}
         onChange={handleInputChange}
-        placeholder="Username"
+        placeholder="Name"
+        className="bg-gray-200 p-3 rounded-full h-[3rem] w-60 focus:outline-offset-2 focus:outline-2 focus:outline-gray-400"
+      />
+      <input
+        type="email"
+        name="email"
+        value={formData.email || ""}
+        onChange={handleInputChange}
+        placeholder="email"
         className="bg-gray-200 p-3 rounded-full h-[3rem] w-60 focus:outline-offset-2 focus:outline-2 focus:outline-gray-400"
       />
       <input
         type="password"
         name="password"
-        value={formData.password  || ""}
+        value={formData.password || ""}
         onChange={handleInputChange}
         placeholder="Password"
         className="bg-gray-200 p-3 rounded-full h-[3rem] w-60 focus:outline-offset-2 focus:outline-2 focus:outline-gray-400"
@@ -30,4 +38,4 @@ const LoginForm = ({ formData, setFormData }) => {
   );
 };
 
-export default LoginForm;
+export default RegisterForm;
