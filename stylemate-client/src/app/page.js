@@ -6,7 +6,7 @@ import RegisterForm from "@/components/Auth/RegisterForm";
 import { useState } from "react";
 import { IoShirt } from "react-icons/io5";
 import "@/styles/loginStyle.css";
-import { useRouter } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 
 const Home = () => {
   const router = useRouter();
@@ -37,7 +37,7 @@ const Home = () => {
   const login = (e) => {
     e.preventDefault();
     console.log("Login! : ", formData);
-    router.push("/home");
+    redirect("/home");
   };
 
   const register = (e) => {
