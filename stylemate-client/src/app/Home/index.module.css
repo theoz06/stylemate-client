@@ -1,0 +1,64 @@
+.container {
+    height: 100vh;
+    color: red;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    height: 60px;
+    background-color: #99a1af;
+    text-align: center;
+    color: #ffffff;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    cursor: pointer;
+}
+
+.tab span{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.tab p {
+    font-size: 10px;
+}
+
+.floating_container{
+    position: absolute;
+    border-radius: 60%;
+    border-width: 5px;
+    border-color: #ffffff;
+    height: 70px;
+    width: 70px;
+    background-color: #99a1af;
+    bottom: 15px;
+    z-index: -1;    
+}
+
+.floating_icon {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: #ffffff;
+}
+
+.active_tab p {
+    visibility: hidden;
+}
+
+
+
