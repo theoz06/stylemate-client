@@ -23,7 +23,7 @@ const RegisterForm = ({ formData, setFormData }) => {
         name="email"
         value={formData.email || ""}
         onChange={handleInputChange}
-        placeholder="email"
+        placeholder="Email"
         className="bg-gray-200 p-3 rounded-full h-[3rem] w-60 focus:outline-offset-2 focus:outline-2 focus:outline-gray-400"
       />
       <input
