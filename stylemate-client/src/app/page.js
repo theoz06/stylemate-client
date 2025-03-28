@@ -53,7 +53,7 @@ const Home = () => {
             </span>
           </div>
 
-          <div className="md:w-1/2 mt-3">
+          <div className="md:w-1/2 lg:w-1/3 mt-3">
             <div className=" bg-[#ffffff] w-full rounded-lg  shadow-2xl shadow-gray-400 p-5">
               <form
                 method="POST"
@@ -65,7 +65,7 @@ const Home = () => {
 
                 <div className="container-button flex flex-col items-center justify-center w-full space-y-3">
                   <button
-                    className="bg-blue-500 text-white p-3 rounded-full w-[60%]"
+                    className="bg-blue-500 text-white p-3 rounded-full w-[60%] lg:w-[50%] hover:bg-blue-600 transition-all duration-300 ease-in-out"
                     type="button"
                     onClick={activeTab === "login" ? login : register}
                   >
