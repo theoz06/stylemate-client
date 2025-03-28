@@ -44,38 +44,26 @@ const Home = () => {
 
   return (
     <>
-      <main className="container-main flex flex-col items-center justify-center min-h-screen w-full">
+      <main className="container-main flex flex-col items-center justify-center min-h-screen w-full" >
         <div className="container-main-content flex flex-col items-center justify-center w-full space-y-6">
           <div className="container-logo flex flex-col-reverse items-center justify-center w-full gap-3">
-            <h1 className="text-5xl font-semibold text-center">StyleMate</h1>
+            <h1 className="text-5xl font-semibold text-center  ">StyleMate</h1>
             <span className="text-8xl p-3 rounded-full bg-gray-200">
               <IoShirt />
             </span>
           </div>
 
-          <div className=" mt-5">
-            <div className="container-tabs flex items-end justify-start top-[-24px]">
-              <div className="tab-content flex items-center text-lg font-semibold text-center border-x-2 border-t-2 border-gray-200">
-                <div className={`cursor-pointer relative ${activeTab == "login" && "activeTab"}`} onClick={() => setActiveTab("login")}>
-                  <p className={`tab p-3 ${activeTab === "login"? "activeTa" : "bg-gray-200"}`}>Login</p>
-                </div>
-                <div className={`cursor-pointer ${activeTab == "register" ? "activeTab " : ""}`} onClick={() => setActiveTab("register")}>
-                  <p className={`tab p-3  ${activeTab === "register"? "" : "bg-gray-200"}`}>Register</p>
-                </div>
-              </div>
-              <div>
-                <div className="border-b-2 border-gray-200 w-35"></div>
-              </div>
-            </div>
-            <div className=" bg-[#ffffff] w-full rounded-b-lg  shadow-md shadow-gray-200 border-t-0 border-x-2 border-b-2 border-gray-200">
+          <div className="md:w-1/2 mt-3">
+            <div className=" bg-[#ffffff] w-full rounded-lg  shadow-2xl shadow-gray-400 p-5">
               <form
-                className="form flex flex-col items-center justify-center max-w-full gap-6 p-5 "
-                onSubmit={login}
+                method="POST"
+                className="form flex flex-col items-center justify-center gap-6  "
+                onSubmit={activeTab === "login" ? login : register}
               >
                 {activeTab === "login" && (<LoginForm formData={formData} setFormData={setFormData} />) }
                 {activeTab === "register" && (<RegisterForm formData={formData} setFormData={setFormData} />) }
 
-                <div className="container-button flex flex-col items-center justify-center w-full">
+                <div className="container-button flex flex-col items-center justify-center w-full space-y-3">
                   <button
                     className="bg-blue-500 text-white p-3 rounded-full w-[60%]"
                     type="button"
@@ -83,6 +71,15 @@ const Home = () => {
                   >
                     {activeTab === "login" ? "Login" : "Register"}
                   </button>
+                  <p className="text-center text-gray-500">Or</p>
+                  <p>
+                    {activeTab === "login"? "Don't have an account?" : "Already have an account?"}
+                    <span>  </span>
+                    <span className="relative text-blue-500 cursor-pointer font-semibold hover:underline" onClick={() => setActiveTab(activeTab === "login" ? "register" : "login")}>
+                      
+                        {activeTab === "login" ? "Register" : "Login"} .
+                    </span>
+                  </p>
                 </div>
               </form>
             </div>

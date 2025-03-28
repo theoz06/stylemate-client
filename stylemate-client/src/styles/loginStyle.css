@@ -1,4 +1,12 @@
+.container-main {
+    background-image: url('/assets/images/BG.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
 
 .activeTab{
     background-color: #ffffff;
 }
+
