@@ -14,25 +14,25 @@ const Home = () => {
     username: "",
     password: "",
     email: "",
-    name: ""
+    name: "",
   });
 
   const [activeTab, setActiveTab] = useState("login");
 
-  useEffect(()=> {
-    if(activeTab === "login"){
+  useEffect(() => {
+    if (activeTab === "login") {
       setFormData({
         username: "",
         password: "",
-      })
-    }else if(activeTab === "register"){
+      });
+    } else if (activeTab === "register") {
       setFormData({
         password: "",
         email: "",
-        name: ""
-      })
+        name: "",
+      });
     }
-  },[activeTab]);
+  }, [activeTab]);
 
   const login = (e) => {
     e.preventDefault();
@@ -43,28 +43,33 @@ const Home = () => {
   const register = (e) => {
     e.preventDefault();
     console.log("Register! : ", formData);
-  }
+  };
 
   return (
     <>
-      <main className="container-main flex flex-col items-center justify-center min-h-screen w-full" >
+      <main className="container-main flex flex-col items-center justify-center min-h-screen w-full">
         <div className="container-main-content flex flex-col items-center justify-center w-full space-y-6">
-          <div className="container-logo flex flex-col-reverse items-center justify-center w-full gap-3">
-            <h1 className="text-5xl font-semibold text-center  ">StyleMate</h1>
-            <span className="text-8xl p-3 rounded-full bg-gray-200">
-              <IoShirt />
-            </span>
-          </div>
-
-          <div className="md:w-1/2 lg:w-1/3 mt-3">
+          <div className="md:w-1/2 lg:w-1/3">
             <div className=" bg-[#ffffff] w-full rounded-lg  shadow-2xl shadow-gray-400 p-5">
+              <div className="container-logo flex flex-col-reverse items-center justify-center w-full gap-3">
+                <h1 className=" text-3xl md:text-5xl font-semibold text-center  ">
+                  StyleMate
+                </h1>
+                <span className="text-5xl md:text-8xl p-3 rounded-full bg-gray-200">
+                  <IoShirt />
+                </span>
+              </div>
               <form
                 method="POST"
-                className="form flex flex-col items-center justify-center gap-6  "
+                className="form flex flex-col items-center justify-center gap-6 mt-3 "
                 onSubmit={activeTab === "login" ? login : register}
               >
-                {activeTab === "login" && (<LoginForm formData={formData} setFormData={setFormData} />) }
-                {activeTab === "register" && (<RegisterForm formData={formData} setFormData={setFormData} />) }
+                {activeTab === "login" && (
+                  <LoginForm formData={formData} setFormData={setFormData} />
+                )}
+                {activeTab === "register" && (
+                  <RegisterForm formData={formData} setFormData={setFormData} />
+                )}
 
                 <div className="container-button flex flex-col items-center justify-center w-full space-y-3">
                   <button
@@ -76,11 +81,19 @@ const Home = () => {
                   </button>
                   <p className="text-center text-gray-500">Or</p>
                   <p>
-                    {activeTab === "login"? "Don't have an account?" : "Already have an account?"}
-                    <span>  </span>
-                    <span className="relative text-blue-500 cursor-pointer font-semibold hover:underline" onClick={() => setActiveTab(activeTab === "login" ? "register" : "login")}>
-                      
-                        {activeTab === "login" ? "Register" : "Login"} .
+                    {activeTab === "login"
+                      ? "Don't have an account?"
+                      : "Already have an account?"}
+                    <span> </span>
+                    <span
+                      className="relative text-blue-500 cursor-pointer font-semibold hover:underline"
+                      onClick={() =>
+                        setActiveTab(
+                          activeTab === "login" ? "register" : "login"
+                        )
+                      }
+                    >
+                      {activeTab === "login" ? "Register" : "Login"} .
                     </span>
                   </p>
                 </div>
