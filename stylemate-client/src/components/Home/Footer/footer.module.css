@@ -1,0 +1,57 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    height: 60px;
+    background-color: #123458;
+    text-align: center;
+    color: #F1EFEC;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    cursor: pointer;
+}
+
+.tab span{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.tab p {
+    font-size: 10px;
+    transition: all 0.2s ease-out;
+}
+
+.active_tab p {
+    transform: translateY(20px);
+}
+
+.tab_indicator {
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background-color: #f8f8f8f8;
+    bottom: 10px;
+    transform: translateX(-15px);
+    transition: left 0.3s ease-in-out;
+    z-index: 15;
+}
+
+.active_tab span {
+    transform:translateY(-2px);
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+
+
