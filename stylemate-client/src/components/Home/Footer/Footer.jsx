@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import footer from "@/components/Home/Footer/footer.module.css";
 import { IoMdHome, IoShirt } from "react-icons/io";
+import { RiAiGenerate } from "react-icons/ri";
 import { PiShuffleBold } from "react-icons/pi";
 
 
