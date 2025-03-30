@@ -22,7 +22,7 @@ const Footer = () => {
     {
       id: 1,
       icon: <RiAiGenerate />,
-      label: "Generate",
+      label: "Mix & Match",
     },
     {
       id: 2,
