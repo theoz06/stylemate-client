@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import footer from "@/components/Home/Footer/footer.module.css";
-import { IoMdHome, IoShirt } from "react-icons/io";
+import { IoMdHome } from "react-icons/io";
+import { IoShirt } from "react-icons/io5";
 import { RiAiGenerate } from "react-icons/ri";
 import { MdManageAccounts } from "react-icons/md";
 
