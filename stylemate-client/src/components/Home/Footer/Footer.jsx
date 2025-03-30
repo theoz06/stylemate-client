@@ -2,8 +2,9 @@
 
 import React, { useState } from "react";
 import footer from "@/components/Home/Footer/footer.module.css";
-import { IoMdHome } from "react-icons/io";
+import { IoMdHome, IoShirt } from "react-icons/io";
 import { PiShuffleBold } from "react-icons/pi";
+
 
 const Footer = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -18,17 +19,17 @@ const Footer = () => {
     },
     {
       id: 1,
-      icon: <PiShuffleBold />,
+      icon: <RiAiGenerate />,
       label: "Generate",
     },
     {
       id: 2,
-      icon: <IoMdHome />,
-      label: "Profile",
+      icon: <IoShirt />,
+      label: "Wardrobe",
     },
     {
       id: 3,
-      icon: <IoMdHome />,
+      icon: <MdManageAccounts />,
       label: "Settings",
     },
   ];
