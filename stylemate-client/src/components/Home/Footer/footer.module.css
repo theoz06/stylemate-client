@@ -41,7 +41,6 @@
     height: 4px;
     background-color: #f8f8f8f8;
     bottom: 10px;
-    transform: translateX(-15px);
     transition: left 0.3s ease-in-out;
     z-index: 15;
 }
@@ -49,6 +48,19 @@
 .active_tab span {
     transform:translateY(-2px);
     transition: all 0.2s ease-in-out;
+}
+
+.tab_position_0 {
+    left: calc(11.7% - 15px);
+}
+.tab_position_1 {
+    left: calc(36.9% - 15px);
+}
+.tab_position_2 {
+    left: calc(63.1% - 15px);
+}
+.tab_position_3 {
+    left: calc(87.9% - 15px);
 }
 
 
