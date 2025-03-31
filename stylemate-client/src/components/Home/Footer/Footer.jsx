@@ -10,8 +10,7 @@ import { MdManageAccounts } from "react-icons/md";
 
 const Footer = () => {
   const [activeTab, setActiveTab] = useState(0);
-
-  const tabPositions = `tab_position_${activeTab}`;
+  
 
   const tabs = [
     {
@@ -39,7 +38,7 @@ const Footer = () => {
   return (
     <footer className={footer.footer}>
       <div
-        className={`footer-content  relative w-[700px] ${tabPositions} flex justify-around items-center `}
+        className={`footer-content  relative w-[700px]  flex justify-around items-center text-center `}
       >
         {tabs.map((tab, id) => (
           <button
@@ -56,8 +55,7 @@ const Footer = () => {
           </button>
         ))}
         <span
-          className={footer.tab_indicator}
-          style={{ left: `${12.5 + activeTab * 25}%` }}
+          className={`${footer.tab_indicator} ${footer[`tab_position_${activeTab}`]}`}
         ></span>
       </div>
     </footer>
