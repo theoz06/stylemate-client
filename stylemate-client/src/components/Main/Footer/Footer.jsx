@@ -1,16 +1,14 @@
 "use client";
 
 import React, { useState } from "react";
-import footer from "@/components/Home/Footer/footer.module.css";
+import footer from "@/components/Main/Footer/footer.module.css";
 import { IoMdHome } from "react-icons/io";
 import { IoShirt } from "react-icons/io5";
 import { RiAiGenerate } from "react-icons/ri";
 import { MdManageAccounts } from "react-icons/md";
 
 
-const Footer = () => {
-  const [activeTab, setActiveTab] = useState(0);
-  
+const Footer = ({ activeTab, onTabChange }) => {  
 
   const tabs = [
     {
@@ -46,7 +44,7 @@ const Footer = () => {
             className={`${footer.tab} ${
               activeTab === tab.id ? footer.active_tab : ""
             }`}
-            onClick={() => setActiveTab(tab.id)}
+            onClick={() => onTabChange(tab.id)}
           >
             <span className={activeTab === tab.id ? footer.active_icon : ""}>
               {tab.icon}
