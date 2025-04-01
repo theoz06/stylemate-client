@@ -3,7 +3,6 @@
 import React from "react";
 import { useState } from "react";
 import index from "./index.module.css";
-import { IoMdHome } from "react-icons/io";
 import Footer from "@/components/Main/Footer/Footer";
 import Main from "@/components/Main/Home";
 import MixAndMatch from "@/components/Main/MixAndMatch";
@@ -16,8 +15,8 @@ const Page = () => {
 
   return (
     <div className={index.container}>
-      <main className="flex items-center justify-center min-h-screen w-full bg-[#ffffff]">
-        <section className="h-full w-full flex justify-center items-center">
+      <main className="flex items-center justify-center min-h-screen w-full">
+        <section className={`${index.section_container} h-full w-full flex justify-center items-center`}>
           {activeTab === 0 && <Main />}
           {activeTab === 1 && <MixAndMatch />}
           {activeTab === 2 && <WarDrobe />}
