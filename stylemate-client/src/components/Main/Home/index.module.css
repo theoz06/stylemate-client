@@ -1,0 +1,18 @@
+.icon, .greeting {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+@keyframes moveLeftRight {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
+}
+
+.animated_arrow {
+    animation: moveLeftRight 0.8s ease-in-out infinite;
+}

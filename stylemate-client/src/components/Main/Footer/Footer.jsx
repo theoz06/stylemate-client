@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import footer from "@/components/Main/Footer/footer.module.css";
 import { IoMdHome } from "react-icons/io";
 import { IoShirt } from "react-icons/io5";
-import { RiAiGenerate } from "react-icons/ri";
+import { LuAtom } from "react-icons/lu";
 import { MdManageAccounts } from "react-icons/md";
 
 
@@ -18,7 +18,7 @@ const Footer = ({ activeTab, onTabChange }) => {
     },
     {
       id: 1,
-      icon: <RiAiGenerate />,
+      icon: <LuAtom />,
       label: "Mix & Match",
     },
     {
