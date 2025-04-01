@@ -17,26 +17,12 @@ const Page = () => {
   return (
     <div className={index.container}>
       <main className="flex items-center justify-center min-h-screen w-full bg-[#ffffff]">
-        {activeTab === 0 && (
-          <div>
-            <Main />
-          </div>
-        )}
-        {activeTab === 1 && (
-          <div>
-            <MixAndMatch />
-          </div>
-        )}
-        {activeTab === 2 && (
-          <div>
-            <WarDrobe />
-          </div>
-        )}
-        {activeTab === 3 && (
-          <div>
-            <div>Profil</div>
-          </div>
-        )}  
+        <section className="h-full w-full flex justify-center items-center">
+          {activeTab === 0 && <Main />}
+          {activeTab === 1 && <MixAndMatch />}
+          {activeTab === 2 && <WarDrobe />}
+          {activeTab === 3 && <Profil />}
+        </section>
       </main>
       <Footer activeTab={activeTab} onTabChange={setActiveTab} />
     </div>
