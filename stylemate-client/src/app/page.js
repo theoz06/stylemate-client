@@ -37,7 +37,7 @@ const Home = () => {
   const login = (e) => {
     e.preventDefault();
     console.log("Login! : ", formData);
-    redirect("/home");
+    router.push("/home");
   };
 
   const register = (e) => {
