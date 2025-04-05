@@ -1,7 +1,11 @@
 .icon, .greeting {
-    font-size: 2rem;
     font-weight: 600;
     text-align: left;
+}
+
+.greeting {
+    font-size: 2rem;
+    color: #123458;
 }
 
 @keyframes moveLeftRight {
@@ -15,4 +19,17 @@
 
 .animated_arrow {
     animation: moveLeftRight 0.8s ease-in-out infinite;
+}
+
+@keyframes rotateIcon {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animated_icon {
+    animation: rotateIcon 1.5s linear infinite;
 }
