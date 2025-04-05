@@ -10,7 +10,6 @@ const useGetWeather = () => {
 
         try {
             const res = await getWeather(lat, lon);
-            console.log("res: " + res);
             return res;
         } catch (err) {
             const errMessage = err?.response?.data?.message || err?.response?.error || "Failed to fetch weather data!";
