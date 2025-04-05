@@ -1,0 +1,27 @@
+@keyframes slideUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide_up_button {
+    animation: slideUp 0.4s ease-out forwards;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.animated_shuffle_icon{
+    animation: spin 0.3s linear infinite;
+}
