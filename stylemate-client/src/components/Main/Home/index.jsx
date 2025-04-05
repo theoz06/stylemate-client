@@ -12,9 +12,10 @@ import { weatherIcons } from "@/libs/datas/weatherIcon";
 const Home = ({ setActiveTab }) => {
   const [loading, setLoading] = useState(true);
   const {location} = useGetLocation();
+  console.log("location:" + JSON.stringify(location, null, 2));
 
-  const lat = location?.lat;
-  const lon = location?.lon;
+  const lat = location?.latitude;
+  const lon = location?.longitude;
 
   const {getWeatherData, error} = useGetWeather();
   const [weatherData, setWeatherData] = useState(null);
