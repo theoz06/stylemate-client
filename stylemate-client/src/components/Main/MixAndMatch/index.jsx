@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import index from "./index.module.css";
 import { useState } from "react";
 import { PiShuffleFill } from "react-icons/pi";
-import { GoFlame } from "react-icons/go";
-import { GiPartyPopper } from "react-icons/gi";
-import { FaTshirt, FaBriefcase } from "react-icons/fa";
+import OccasionSelector from "./occasionSelector";
+import OutiftPreview from "./outiftPreview";
 
 const MixAndMatch = ({ activeTab }) => {
   const [loading, setLoading] = useState(false);
@@ -36,75 +35,14 @@ const MixAndMatch = ({ activeTab }) => {
 
       <main className="w-full h-full flex flex-col items-center justify-center p-3 text-[#123458] mt-1">
         {outfits.length <= 0 && (
-          <div className="w-full max-w-md flex flex-col items-center justify-center bg-white rounded-xl p-6 shadow-md">
-            <h2 className="text-xl font-semibold mb-4">
-              Mau outfit untuk apa?
-            </h2>
-
-            <div className="w-full mt-2">
-              <p className="font-medium mb-3">Pilih Acara:</p>
-              <div className="grid grid-cols-2 gap-4 w-full">
-                <button
-                  className={`flex flex-col items-center justify-center p-4 rounded-lg border-2 transition-all duration-300 hover:bg-blue-50 ${
-                    selectedOccasion === "formal"
-                      ? "border-[#123458] bg-blue-50"
-                      : "border-gray-200"
-                  }`}
-                  onClick={() => handleOccasionChange("formal")}
-                >
-                  <FaBriefcase className="text-3xl mb-2" />
-                  <span>Formal</span>
-                </button>
-
-                <button
-                  className={`flex flex-col items-center justify-center p-4 rounded-lg border-2 transition-all duration-300 hover:bg-blue-50 ${
-                    selectedOccasion === "casual"
-                      ? "border-[#123458] bg-blue-50"
-                      : "border-gray-200"
-                  }`}
-                  onClick={() => handleOccasionChange("casual")}
-                >
-                  <FaTshirt className="text-3xl mb-2" />
-                  <span>Casual</span>
-                </button>
-
-                <button
-                  className={`flex flex-col items-center justify-center p-4 rounded-lg border-2 transition-all duration-300 hover:bg-blue-50 ${
-                    selectedOccasion === "sport"
-                      ? "border-[#123458] bg-blue-50"
-                      : "border-gray-200"
-                  }`}
-                  onClick={() => handleOccasionChange("sport")}
-                >
-                  <GoFlame className="text-3xl mb-2" />
-                  <span>Sport</span>
-                </button>
-
-                <button
-                  className={`flex flex-col items-center justify-center p-4 rounded-lg border-2 transition-all duration-300 hover:bg-blue-50 ${
-                    selectedOccasion === "party"
-                      ? "border-[#123458] bg-blue-50"
-                      : "border-gray-200"
-                  }`}
-                  onClick={() => handleOccasionChange("party")}
-                >
-                  <GiPartyPopper className="text-3xl mb-2" />
-                  <span>Party</span>
-                </button>
-              </div>
-            </div>
-          </div>
+          <OccasionSelector
+            selectedOccasion={selectedOccasion}
+            handleOccasionChange={handleOccasionChange}
+          />
         )}
 
         {outfits.length > 0 && (
-          <div className="w-full max-w-md mt-6 gap-4 flex flex-col items-center justify-center">
-            <div className="outfit-top w-full h-[35vh] flex items-center justify-center bg-white rounded-xl shadow-md overflow-hidden">
-              <p className="text-lg font-medium text-gray-600">Atasan</p>
-            </div>
-            <div className="outfit-bottom w-full h-[35vh] flex items-center justify-center bg-white rounded-xl shadow-md overflow-hidden">
-              <p className="text-lg font-medium text-gray-600">Bawahan</p>
-            </div>
-          </div>
+          <OutiftPreview />
         )}
       </main>
 
