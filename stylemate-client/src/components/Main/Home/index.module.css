@@ -3,6 +3,10 @@
     text-align: left;
 }
 
+.icon {
+    font-size: 3rem;
+}
+
 .greeting {
     font-size: 2rem;
     color: #123458;
@@ -18,7 +22,7 @@
 }
 
 .animated_arrow {
-    animation: moveLeftRight 0.8s ease-in-out infinite;
+    animation: moveLeftRight 1s ease-in-out infinite;
 }
 
 @keyframes rotateIcon {
@@ -31,5 +35,5 @@
 }
 
 .animated_icon {
-    animation: rotateIcon 1.5s linear infinite;
+    animation: rotateIcon 2.0s linear infinite;
 }
