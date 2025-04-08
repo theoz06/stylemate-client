@@ -86,7 +86,7 @@ const Home = ({ setActiveTab }) => {
       <main className="w-full flex flex-col items-center bg-[#F1EFEC]">
         <div className="w-full flex flex-col items-center justify-center space-y-3">
           {/* Weather and Greeting Section */}
-          <div className={`${index.icon} w-full md:w-3/4 flex items-center gap-3 text-4xl font-extrabold p-4`}>
+          <div className={`${index.icon} w-full flex items-center justify-center gap-3 text-4xl font-extrabold p-4`}>
             <div className="text-5xl">{icon}</div>
             <div className="flex flex-col gap-1">
               <div className={index.greeting}>
@@ -104,13 +104,15 @@ const Home = ({ setActiveTab }) => {
 
           {/* Outfit Recommendations Section */}
           <div className="w-full min-h-64 flex flex-col items-start justify-betwee gap-3 p-4 rounded-lg">
-            <div className="w-full text-sm font-bold mx-3">
+            <div className="w-full text-sm font-bold p-3">
               <p className="mb-2">Rekomendasi outfit ({translateWeather}):</p>
-              <div className="p-3 rounded-md shadow-sm text-center">coming soon</div>
+              <div className="h-[200px] p-3 rounded-md shadow-sm text-center flex items-center justify-center">
+                <p>Coming Soon...</p>
+              </div>
             </div>
             
             {/* Call to Action */}
-            <div className="flex items-center justify-between w-full text-2xl font-bold p-3 mt-4 rounded-lg">
+            <div className="flex items-center justify-between w-full text-2xl md:text-4xl font-bold p-3 mt-2 rounded-lg md:justify-center">
               <div className="w-3/5">
                 <p>Mau coba sesuaikan outfitmu hari ini?</p>
               </div>
@@ -119,11 +121,11 @@ const Home = ({ setActiveTab }) => {
                   className="flex items-center justify-center text-left"
                   onClick={() => setActiveTab(1)}
                 >
-                  <p className="p-1 rounded-md text-[#123458] text-6xl hover:bg-[#123458] hover:text-white transform transition duration-300">
+                  <p className="p-1 rounded-md text-[#123458] text-6xl md:text-9xl hover:bg-[#123458] hover:text-white transform transition duration-300">
                     <LuAtom className={index.animated_icon} />
                   </p>
                 </button>
-                <p className="text-sm">Klik ini</p>
+                <p className="text-sm md:text-2xl">Klik disini</p>
               </div>
             </div>
           </div>
