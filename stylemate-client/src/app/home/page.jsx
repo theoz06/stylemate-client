@@ -9,6 +9,7 @@ import MixAndMatch from "@/components/Main/MixAndMatch";
 import WarDrobe from "@/components/Main/Wardrobe";
 import Profil from "@/components/Main/Profil";
 import SplashScreen from "@/components/splashScreen";
+import Header from "@/components/header";
 
 const Page = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -17,7 +18,7 @@ const Page = () => {
     <div className={index.container}>
       <main className=" flex items-center justify-center min-h-screen w-full">
         <section
-          className={`${index.section_container} h-full w-full flex justify-center items-center`}
+          className={`${index.section_container} h-full w-full `}
         >
           <SplashScreen key={activeTab} tabId={activeTab}>
             {activeTab === 0 && <Main setActiveTab={setActiveTab} />}

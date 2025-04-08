@@ -4,6 +4,7 @@ import { useState } from "react";
 import { PiShuffleFill } from "react-icons/pi";
 import OccasionSelector from "./occasionSelector";
 import OutiftPreview from "./outiftPreview";
+import Header from "@/components/header";
 
 const MixAndMatch = ({ activeTab }) => {
   const [loading, setLoading] = useState(false);
@@ -27,11 +28,22 @@ const MixAndMatch = ({ activeTab }) => {
 
   return (
     <article className="relative w-full h-full flex flex-col items-center ">
-      <header className="fixed z-40 top-5 w-full px-3">
-        <h1 className="text-3xl font-bold text-center text-[#123458]">
-          Mix and Match
-        </h1>
-      </header>
+      {outfits.length > 0 && (
+        <header className="header_container fixed z-40 top-0 w-full p-3 flex items-center justify-center text-[#f1efec] bg-[#123458]">
+          <div className="header_content flex items-center">
+            <>
+              <div className="title">
+                <p>Filter</p>
+              </div>
+              <div className="options"></div>
+            </>
+          </div>
+        </header>
+      )}
+
+      {outfits.length <= 0 && (
+        <Header title="Mix & Match"/>
+      )}
 
       <main className="w-full h-full flex flex-col items-center justify-center p-3 text-[#123458] mt-1">
         {outfits.length <= 0 && (
@@ -41,9 +53,7 @@ const MixAndMatch = ({ activeTab }) => {
           />
         )}
 
-        {outfits.length > 0 && (
-          <OutiftPreview />
-        )}
+        {outfits.length > 0 && <OutiftPreview />}
       </main>
 
       {activeTab === 1 && (
