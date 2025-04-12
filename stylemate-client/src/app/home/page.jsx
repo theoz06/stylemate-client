@@ -9,7 +9,6 @@ import MixAndMatch from "@/components/Main/MixAndMatch";
 import WarDrobe from "@/components/Main/Wardrobe";
 import Profil from "@/components/Main/Profil";
 import SplashScreen from "@/components/splashScreen";
-import Header from "@/components/header";
 
 const Page = () => {
   const [activeTab, setActiveTab] = useState(1);
