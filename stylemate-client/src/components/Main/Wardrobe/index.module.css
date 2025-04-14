@@ -1,3 +1,13 @@
+.list li:not(:last-child) {
+    border-bottom: 1px solid #05182d;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.list li:last-child::after {
+    content: "...";
+}
+
 @keyframes slideRightLeft {
     0% {
         right: -10px;
@@ -12,3 +22,9 @@
 .button{
   animation: slideRightLeft 1s ease-out forwards;
 }
+
+.list li .active {
+    color: #f1efec;
+}
+
+
