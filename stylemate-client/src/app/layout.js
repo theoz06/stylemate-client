@@ -1,5 +1,5 @@
 import React from "react"; 
-import { Poppins } from 'next/font/google'
+import { Poppins } from 'next/font/google';
 import "./globals.css";
 
 const poppins = Poppins({
