@@ -12,8 +12,8 @@ const Wardrobe = () => {
 
       <main className="w-full h-screen flex items-center justify-center text-[#123458]">
         <div className="relative w-full h-full flex pt-7">
-          <aside className="sidebar sidebar-container w-[70px] flex-wrap bg-[#123458] text-[#05182d] flex flex-col items-center shadow-[5px_0_5px_-2px_rgba(0,0,0,0.3)]">
-            <div className="sidebar-content w-full flex flex-col items-center">
+          <aside className={`${index.sidebar_content} sidebar sidebar-container w-[70px] flex-wrap bg-[#123458] text-[#05182d] flex flex-col items-center shadow-[5px_0_5px_-2px_rgba(0,0,0,0.3)]`}>
+            <div className="w-full flex flex-col items-center">
               <ul
                 className={`${index.list} sidebar-list h-full w-full p-6 flex flex-col items-center gap-3 text-center text-sm font-semibold`}
               >

@@ -8,6 +8,22 @@
     content: "...";
 }
 
+@keyframes slideLeftRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.sidebar_content{
+  animation: slideLeftRight 1s ease-in-out forwards;
+  transition-delay: 1s;
+}
+
 @keyframes slideRightLeft {
     0% {
         right: -10px;
@@ -20,7 +36,7 @@
 }
 
 .button{
-  animation: slideRightLeft 1s ease-out forwards;
+  animation: slideRightLeft 1s ease-in-out forwards;
 }
 
 .list li .active {
