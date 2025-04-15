@@ -23,7 +23,7 @@ const Wardrobe = () => {
 
     const timer = setTimeout(() => {
       setShowContent(true);
-    }, 1200);
+    }, 500);
 
     return () => {
       clearTimeout(timer);
