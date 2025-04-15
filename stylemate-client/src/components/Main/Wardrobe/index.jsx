@@ -7,7 +7,7 @@ import Modal from "@/components/modal";
 const Wardrobe = () => {
   const [activeSideMenu, setActiveSideMenu] = useState(1);
   const [showContent, setShowContent] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   
   const onClose = () => {
     setIsOpen(false);
