@@ -123,7 +123,7 @@ const Wardrobe = () => {
         +
       </button>
       {isOpen && (
-        <Modal title={mode === "add" ? "Add Outfit" : "Edit Outfit"} onClose={overLayClick} isOpen={isOpen}>
+        <Modal title={mode === "add" ? "Add Outfit" : "Edit Outfit"} onClose={onClose} overLayClick={overLayClick} isOpen={isOpen}>
           <div>
             <Form
               mode={mode}
