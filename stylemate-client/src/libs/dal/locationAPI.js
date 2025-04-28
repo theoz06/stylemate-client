@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const weatherAPI = axios.create({
-    baseURL : "https://api.ipapi.com/",
+const locationAPI = axios.create({
+    baseURL : "https://api.ipapi.com/"
 })
 
-export default weatherAPI;
+export default locationAPI;

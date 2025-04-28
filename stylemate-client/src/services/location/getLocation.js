@@ -6,7 +6,9 @@ const getLocation = async () => {
     try {
         const res = await axios.get("https://api64.ipify.org?format=json");
         const ipAddress = res.data.ip;
+        console.log(ipAddress);
         const response = await locationAPI.get(`${ipAddress}?access_key=${process.env.NEXT_PUBLIC_LOCATION_API_KEY}`);
+        console.log(response.data);
         return response.data;
     }catch(error) {
         throw error;
